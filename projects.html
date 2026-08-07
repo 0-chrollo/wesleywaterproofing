@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBC Steel Structures | Staal Strukture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="wesleylogo.png" alt="Logo">
+            <span class="logo-title"></span>
+          </div>
+      
+        <button class="menu-toggle" id="toggle" aria-label="Toggle menu">
+          <span>Menu</span>
+          <div class="bars">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      
+        <div class="nav-links" id="navLinks">
+           <a href="index.html">Home <i class="fa fa-angle-right"></i></a>
+            <a href="gallery.html">Our Work<i class="fa fa-angle-right"></i></a>
+            <div class="nav-cta-wrap">
+              <a href="contact.html" class="nav-cta"> Get A Quote </a>
+            </div>
+          </div>
+      </nav>
+
+      
+
+
+
+
+
+   
+      <style>
+      
+        body { font-family: Arial, Helvetica, sans-serif; }
+      
+        /* HERO */
+        .hero {
+          background: linear-gradient(rgba(20,35,60,0.75), rgba(20,35,60,0.75)), url("images/wp2.webp") center/cover no-repeat;
+          color:#fff;
+          padding: 100px 50px;
+          
+        }
+        .hero-tag { color:#f6b93b; font-size:22px; font-weight:bold; }
+        .hero-tag span { color:#fff; }
+        .hero h1 { font-size:64px; margin:10px 0 25px; }
+        .hero p { font-size:16px; line-height:1.7; max-width:650px; color:#e8e8e8; }
+
+        .hero-btns { margin-top:20px; }
+        .btn { display:inline-block; 
+            padding:15px 28px; 
+            margin-right:15px;
+             font-weight:bold; 
+             text-decoration:none;
+             }
+        .btn-fill { background:#ba1b1b; color:#ffffff; }
+        .btn-line { border:2px solid #fff; color:#fff; }
+      
+   
+
+        .stats-right img { width:65%; 
+            height:auto;
+            
+             object-fit:cover; 
+             display:block; 
+             border-radius:6px; 
+            }
+      
+        /* MOBILE */
+        @media (max-width:768px) {
+          .hero { padding:90px 25px;}
+          .hero h1 { font-size:38px; }
+          .hero-btns .btn {
+             padding:13px 23px;
+              font-size:13px; 
+              margin-right:10px;
+              border-radius: 25px;
+             }
+      
+        }
+      </style>
+
+      
+<section class="hero">
+    <div>
+    <p class="tag">Our Work</p>
+</div>
+
+    <h1>Our Gallery</h1>
+    <p>Every project tells the story of careful design, precise manufacturing, and solid erection on site. From agricultural sheds and warehouses to hangars, factories, and commercial buildings, take a look at the steel structures JBC has brought to life across South Africa.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-fill">Get A Quote</a>
+     
+    </div>
+  </section>
+
+
+
+
+
+<style>
+
+
+
+  .work{
+    background:#ffffff;
+    padding: 60px 20px 70px;
+  }
+
+  .work-inner{ max-width: 1100px; margin: 0 auto; }
+
+  .work-title{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 6px;
+    color:#222222;
+  }
+
+  .work-sub{
+    font-size: 14px;
+    color:#555555;
+    margin: 0 0 40px;
+  }
+
+  .block-header{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .block-title{
+    font-size: 18px;
+    font-weight: bold;
+    margin:0;
+    color:#222222;
+  }
+
+  /* GRID */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .pic-grid{ grid-template-columns: repeat(4, 1fr); }
+
+  .video-card, .pic-card{
+    border: 1px solid #cccccc;
+    background:#f8f8f8;
+    cursor:pointer;
+    overflow:hidden;
+  }
+  .video-card.is-hidden, .pic-card.is-hidden{ display:none; }
+
+  .video-card{ position:relative; }
+
+  /* Wraps the embed at the ratio given by Streamable (padding-bottom set inline per video).
+     pointer-events is off so clicks go to the card, not into the embedded player. */
+  .video-thumb{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    background:#000000;
+    pointer-events:none;
+  }
+  .video-thumb iframe{
+    border:none;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0; top:0;
+  }
+
+  .play-btn{
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    width:44px; height:44px;
+    background:#cc0000;
+    color:#ffffff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+  }
+
+  .card-title{
+    margin:0;
+    padding: 8px 10px;
+    font-size: 13px;
+    color:#222222;
+    background:#ffffff;
+    border-top: 1px solid #dddddd;
+  }
+
+  .pic-card img{
+    width:100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display:block;
+  }
+
+  /* VIEW MORE BUTTON */
+  .block-footer{
+    text-align:right;
+    margin-top: 18px;
+  }
+
+  .view-more-btn{
+    background:#cc0000;
+    color:#ffffff;
+    border-radius:25px;
+    font-size: 13px;
+    font-weight:bold;
+    padding: 10px 18px;
+    cursor:pointer;
+  }
+  .view-more-btn:hover{ background:#a30000; }
+
+  .divider{
+    border:none;
+    border-top: 2px solid #ffffff;
+    margin: 20px 0;
+  }
+
+  /* LIGHTBOX */
+  .lightbox{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.85);
+    z-index: 999;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox.is-open{ display:flex; }
+
+  .lightbox-stage{
+    max-width: 94vw;
+    max-height: 92vh;
+    background:#ffffff;
+    padding: 12px;
+    display:flex;
+    flex-direction: column;
+  }
+
+  /* Row above the media, holds only the close button, so it never sits on top of the image/video */
+  .lightbox-topbar{
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .close-btn{
+    width: 36px; height:36px;
+    background:#cc0000;
+    color:#ffffff;
+    border-radius:25px;
+    font-size: 20px;
+    font-weight:bold;
+    cursor:pointer;
+    line-height:1;
+    flex-shrink:0;
+  }
+
+  /* Row that holds prev button / media / next button side by side, so the buttons sit beside the image, not over it */
+  .lightbox-media-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 12px;
+  }
+
+  .lightbox-media{
+    min-width:0;
+    display:flex;
+    justify-content:center;
+  }
+
+  .lightbox-stage video{
+    max-width: 80vw;
+    max-height: 72vh;
+    display:block;
+  }
+
+  /* Video embed box inside the lightbox — width is capped, height follows automatically
+     from the padding-bottom percentage JS sets to match each video's own ratio. */
+  #videoEmbedWrap{
+    position:relative;
+    width: min(90vw, 900px);
+    height:0;
+  }
+  #videoEmbedWrap iframe{
+    border:none;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0; top:0;
+  }
+
+  .lightbox-stage img{
+    max-width: 76vw;
+    max-height: 72vh;
+    display:block;
+  }
+
+  .lightbox-caption{
+    text-align:center;
+    font-size: 13px;
+    padding-top: 10px;
+    color:#222222;
+  }
+
+  .nav-btn{
+    width: 40px; height:40px;
+    background:#cc0000;
+    color:#ffffff;
+    border:none;
+    font-size: 22px;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+
+  .counter{
+    text-align:center;
+    font-size: 12px;
+    color:#555555;
+    padding-top: 4px;
+  }
+
+  @media (max-width: 700px){
+    .grid{ grid-template-columns: repeat(2,1fr); gap:8px; }
+    .pic-grid{ grid-template-columns: repeat(3,1fr); gap:6px; }
+    .lightbox-media-row{ gap:6px; }
+    .nav-btn{ width:32px; height:32px; font-size:18px; }
+    .lightbox-stage img{ max-width: 66vw; }
+    .lightbox-stage video{ max-width: 82vw; }
+    .card-title{ display:none; }
+  }
+
+</style>
+
+
+<section class="work">
+  <div class="work-inner">
+
+    <h2 class="work-title">Our Work</h2>
+    <p class="work-sub">A look at recent projects videos and picture tttttt</p>
+
+    <!-- ============ VIDEOS ============ -->
+    <!-- To add a video: copy one .video-card block below.
+         Change data-embed-src to your Streamable "https://streamable.com/e/XXXXXX" link,
+         and set the same link as the iframe src so the thumbnail preview shows too. -->
+    <div class="block-header">
+      <h3 class="block-title">Videos</h3>
+    </div>
+
+    <div class="grid" id="videoGrid">
+
+      <div class="video-card" data-embed-src="https://streamable.com/e/plao4r">
+        <div class="video-thumb" style="padding-bottom:56.382%">
+          <iframe src="https://streamable.com/e/plao4r" allow="fullscreen" tabindex="-1"></iframe>
+        </div>
+        <div class="play-btn">&#9658;</div>
+        <p class="card-title">Project Video 1</p>
+      </div>
+
+      <div class="video-card" data-embed-src="https://streamable.com/e/syjbw2">
+        <div class="video-thumb" style="padding-bottom:56.382%">
+          <iframe src="https://streamable.com/e/syjbw2" allow="fullscreen" tabindex="-1"></iframe>
+        </div>
+        <div class="play-btn">&#9658;</div>
+        <p class="card-title">Project Video 2</p>
+      </div>
+
+      <div class="video-card" data-embed-src="https://streamable.com/e/7mnli3">
+        <div class="video-thumb" style="padding-bottom:56.382%">
+          <iframe src="https://streamable.com/e/7mnli3" allow="fullscreen" tabindex="-1"></iframe>
+        </div>
+        <div class="play-btn">&#9658;</div>
+        <p class="card-title">Project Video 3</p>
+      </div>
+
+      <div class="video-card" data-embed-src="https://streamable.com/e/rml9ue">
+        <div class="video-thumb" style="padding-bottom:56.382%">
+          <iframe src="https://streamable.com/e/rml9ue" allow="fullscreen" tabindex="-1"></iframe>
+        </div>
+        <div class="play-btn">&#9658;</div>
+        <p class="card-title">Project Video 4</p>
+      </div>
+
+      <!-- Hidden until "View more" is pressed -->
+      <div class="video-card is-hidden" data-embed-src="https://streamable.com/e/z6kmuz">
+        <div class="video-thumb" style="padding-bottom:56.382%">
+          <iframe src="https://streamable.com/e/z6kmuz" allow="fullscreen" tabindex="-1"></iframe>
+        </div>
+        <div class="play-btn">&#9658;</div>
+        <p class="card-title">Project Video 5</p>
+      </div>
+
+      <div class="video-card is-hidden" data-embed-src="https://streamable.com/e/uuns2d">
+        <div class="video-thumb" style="padding-bottom:56.382%">
+          <iframe src="https://streamable.com/e/uuns2d" allow="fullscreen" tabindex="-1"></iframe>
+        </div>
+        <div class="play-btn">&#9658;</div>
+        <p class="card-title">Project Video 6</p>
+      </div>
+
+    </div>
+
+    <div class="block-footer">
+      <button class="view-more-btn" data-target="videoGrid">View more</button>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ============ PICTURES ============ -->
+    <!-- To add a picture: copy one .pic-card block below and change the <img src> and alt text. -->
+    <div class="block-header">
+      <h3 class="block-title">Pictures</h3>
+    </div>
+
+    <div class="grid pic-grid" id="picGrid">
+
+      <div class="pic-card"><img src="images/wp1.webp" alt="Our work — picture 1"></div>
+      <div class="pic-card"><img src="images/wp2.webp" alt="Our work — picture 2"></div>
+      <div class="pic-card"><img src="images/wp3.webp" alt="Our work — picture 3"></div>
+      <div class="pic-card"><img src="images/wp4.webp" alt="Our work — picture 4"></div>
+
+      <div class="pic-card is-hidden"><img src="images/wp5.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp6.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp7.webp" alt="Our work "></div>
+     
+      <div class="pic-card is-hidden"><img src="images/wp9.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp10.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp11.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp12.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp13.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp14.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp15.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp16.webp" alt="Our work"></div>
+      <div class="pic-card is-hidden"><img src="images/wp17.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp18.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp19.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="images/wp20.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="wbg1.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="wbg2.webp" alt="Our work "></div>
+      <div class="pic-card is-hidden"><img src="wgb5.webp" alt="Our work "></div>
+      
+
+
+    </div>
+
+    <div class="block-footer">
+      <button class="view-more-btn" data-target="picGrid">View more</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEO LIGHTBOX -->
+<div class="lightbox" id="videoLightbox">
+  <div class="lightbox-stage">
+    <div class="lightbox-topbar">
+      <button class="close-btn" id="closeVideoBtn">&times;</button>
+    </div>
+    <div class="lightbox-media-row">
+      <div class="lightbox-media">
+        <div id="videoEmbedWrap"></div>
+      </div>
+    </div>
+    <p class="lightbox-caption" id="videoCaption"></p>
+  </div>
+</div>
+
+<!-- PICTURE LIGHTBOX -->
+<div class="lightbox" id="picLightbox">
+  <div class="lightbox-stage">
+    <div class="lightbox-topbar">
+      <button class="close-btn" id="closePicBtn">&times;</button>
+    </div>
+    <div class="lightbox-media-row">
+      <button class="nav-btn nav-prev" id="prevPicBtn">&#8249;</button>
+      <div class="lightbox-media">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <button class="nav-btn nav-next" id="nextPicBtn">&#8250;</button>
+    </div>
+    <p class="lightbox-caption" id="picCaption"></p>
+    <p class="counter"><span id="picCurrent">1</span> / <span id="picTotal">1</span></p>
+  </div>
+</div>
+
+<script>
+(function(){
+
+  /* ---------- View more / show less ---------- */
+  document.querySelectorAll('.view-more-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var grid = document.getElementById(btn.dataset.target);
+      var hiddenCards = grid.querySelectorAll('.is-hidden');
+      var expanding = hiddenCards.length > 0;
+
+      grid.querySelectorAll('.video-card, .pic-card').forEach(function(card, i){
+        if (i >= 4) card.classList.toggle('is-hidden', !expanding);
+      });
+
+      btn.textContent = expanding ? 'Show less' : 'View more';
+    });
+  });
+
+  /* ---------- Video lightbox ---------- */
+  var videoLightbox = document.getElementById('videoLightbox');
+  var videoEmbedWrap = document.getElementById('videoEmbedWrap');
+  var videoCaption = document.getElementById('videoCaption');
+
+  document.querySelectorAll('.video-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      var embedSrc = card.getAttribute('data-embed-src');
+      var thumb = card.querySelector('.video-thumb');
+      var title = card.querySelector('.card-title');
+
+      // Match the same aspect ratio the thumbnail uses (set in each card's style attribute)
+      var ratio = thumb ? thumb.style.paddingBottom : '56.25%';
+      videoEmbedWrap.style.paddingBottom = ratio;
+      videoEmbedWrap.innerHTML = '<iframe src="' + embedSrc + '" allow="fullscreen" allowfullscreen></iframe>';
+
+      videoCaption.textContent = title ? title.textContent : '';
+      videoLightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeVideo(){
+    videoLightbox.classList.remove('is-open');
+    videoEmbedWrap.innerHTML = ''; // removing the iframe stops playback
+    document.body.style.overflow = '';
+  }
+  document.getElementById('closeVideoBtn').addEventListener('click', closeVideo);
+  videoLightbox.addEventListener('click', function(e){ if (e.target === videoLightbox) closeVideo(); });
+
+  /* ---------- Picture lightbox ---------- */
+  var picLightbox = document.getElementById('picLightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var picCaption = document.getElementById('picCaption');
+  var picCurrentEl = document.getElementById('picCurrent');
+  var picTotalEl = document.getElementById('picTotal');
+
+  var allPicCards = document.querySelectorAll('.pic-card');
+  picTotalEl.textContent = allPicCards.length;
+
+  var currentPicIndex = 0;
+
+  function renderPic(){
+    var img = allPicCards[currentPicIndex].querySelector('img');
+    lightboxImg.src = img.getAttribute('src');
+    lightboxImg.alt = img.getAttribute('alt') || '';
+    picCaption.textContent = img.getAttribute('alt') || '';
+    picCurrentEl.textContent = currentPicIndex + 1;
+  }
+
+  allPicCards.forEach(function(card, i){
+    card.addEventListener('click', function(){
+      currentPicIndex = i;
+      renderPic();
+      picLightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closePic(){
+    picLightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  function nextPic(){ currentPicIndex = (currentPicIndex + 1) % allPicCards.length; renderPic(); }
+  function prevPic(){ currentPicIndex = (currentPicIndex - 1 + allPicCards.length) % allPicCards.length; renderPic(); }
+
+  document.getElementById('closePicBtn').addEventListener('click', closePic);
+  document.getElementById('nextPicBtn').addEventListener('click', function(e){ e.stopPropagation(); nextPic(); });
+  document.getElementById('prevPicBtn').addEventListener('click', function(e){ e.stopPropagation(); prevPic(); });
+  picLightbox.addEventListener('click', function(e){ if (e.target === picLightbox) closePic(); });
+
+  /* ---------- Keyboard controls ---------- */
+  document.addEventListener('keydown', function(e){
+    if (videoLightbox.classList.contains('is-open') && e.key === 'Escape') closeVideo();
+    if (picLightbox.classList.contains('is-open')){
+      if (e.key === 'Escape') closePic();
+      if (e.key === 'ArrowRight') nextPic();
+      if (e.key === 'ArrowLeft') prevPic();
+    }
+  });
+
+})();
+</script>
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Company Info -->
+        <div class="footer-section">
+          <div class="foo">
+            <div class="foo-icon"><img src="wesleylogo.png"></div> 
+          </div>
+  
+          <style>
+            .foo {
+              display: flex;
+              align-items: center;
+            }
+  
+            .foo-icon img {
+              width: 7rem;
+             background-color: #dddddd;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          </style>
+  
+          <br>
+  
+          <p>
+            Wesley Waterproofing specializes in waterproofing and roof spray solutions for projects of every scale.
+            From house painting to roof coatings and roof maintenance & repairs, we deliver quality, precision, and reliability backed by 25 years of excellence.
+          </p>
+          
+          <h3 style="margin-top: 1.5rem;">Follow Us</h3>
+          <div class="social-links">
+            <a href="PASTE_FACEBOOK_URL_HERE" target="_blank" class="social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="footer-section-lu">
+          <h5>Quick Links</h5>
+          <br>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-inf">
+  
+            <div class="contact-item">
+              <span><i class="fa-brands fa-whatsapp"></i></span>
+              <a class="col" href="https://wa.me/27814001754">081 400 1754</a>
+            </div>
+  
+            <div class="contact-item">
+              <span><i class="fa-solid fa-envelope"></i></span>
+              <a class="col" href="mailto:wesleywaterproofing@gmail.com">wesleywaterproofing@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <span>263 Cromwell Road, Lombardy East, Johannesburg, 2090</span>
+            </div>
+  
+          </div>
+        </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2026 Wesley Waterproofing. All rights reserved.</p>
+    </div>  
+
+  </footer>
+
+
+
+  <a href="https://wa.me/27814001754" target="_blank" class="whatsapp-widget" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
