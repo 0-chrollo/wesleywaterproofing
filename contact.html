@@ -384,50 +384,55 @@
     
             </div>
     
-            <!-- CONTACT FORM -->
-            <div class="contact-form">
-                <h2>Get a quote</h2>
-                <form>
-    
-                    <div class="form-group">
-                        <input type="text" id="fullname" placeholder="Full Name" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Email Address" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Phone Number" required>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="service">What type of service do you need?</label>
-                        <select id="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="waterproofing-roof-spray">Waterproofing & Roof Spray</option>
-                            <option value="house-painting">House Painting</option>
-                            <option value="roof-coatings">Roof Coatings</option>
-                            <option value="roof-maintenance-repairs">Roof Maintenance & Repairs</option>
-                            <option value="industrial">Industrial Solutions</option>
-                            <option value="residential">Residential Solutions</option>
-                            <option value="other">Other / Custom Project</option>
-                        </select>
-                    </div>
-    
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Tell us more about your roof, the issue you're having, or what you'd like done"></textarea>
-                    </div>
-    
-                    <button type="submit" class="submit-btn">
-                        
-                        Send Message 
-                         <svg style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="white">
-                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                        </svg>
-                    </button>
-                </form>
-            </div>
+     <!-- CONTACT FORM -->
+<div class="contact-form">
+    <h2>Get a quote</h2>
+    <form action="https://formsubmit.co/wesleywaterproofing@gmail.com" method="POST">
+
+        <div class="form-group">
+            <input type="text" id="fullname" name="Full Name" placeholder="Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" name="Email Address" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-group">
+            <input type="tel" id="phone" name="Phone Number" placeholder="Phone Number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="service">What type of service do you need?</label>
+            <select id="service" name="Service Needed" required>
+                <option value="">Select a service...</option>
+                <option value="waterproofing-roof-spray">Waterproofing & Roof Spray</option>
+                <option value="house-painting">House Painting</option>
+                <option value="roof-coatings">Roof Coatings</option>
+                <option value="roof-maintenance-repairs">Roof Maintenance & Repairs</option>
+                <option value="industrial">Industrial Solutions</option>
+                <option value="residential">Residential Solutions</option>
+                <option value="other">Other / Custom Project</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <textarea id="message" name="Message" placeholder="Tell us more about your roof, the issue you're having, or what you'd like done"></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Booking Request - Wesley Waterproofing">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.wesleywaterproofing.co.za/contact.html">
+
+        <button type="submit" class="submit-btn">
+            
+            Send Message 
+             <svg style="width: 18px; height: 18px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" fill="white">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+        </button>
+    </form>
+</div>
     
         </div>
     </div>
