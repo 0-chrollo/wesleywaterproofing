@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.wesleywaterproofing.co.za/sitemap.xml
