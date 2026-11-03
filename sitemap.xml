@@ -7,7 +7,7 @@
   <!-- Home Page — highest priority, changes occasionally -->
   <url>
     <loc>https://www.wesleywaterproofing.co.za/index.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,7 +15,7 @@
   <!-- Projects / Portfolio Page — updated as new work is completed -->
   <url>
     <loc>https://www.wesleywaterproofing.co.za/projects.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,7 +23,7 @@
   <!-- Contact Page -->
   <url>
     <loc>hhttps://www.wesleywaterproofing.co.za/contact.html</loc>
-    <lastmod>2026-05-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
